@@ -1,5 +1,6 @@
 # vi: ft=sh
 
+export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export PATH=$HOME/.bin:$HOME/node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH
 export EDITOR=vim
@@ -7,12 +8,32 @@ export PLATFORM=`uname`
 
 if [[ $PLATFORM == 'Linux' ]]; then
     export PROJECTSPATH="$HOME/projects"
+    export EX_PROJECTSPATH="$HOME/projects"
 else
     export PROJECTSPATH="$HOME/Projects"
+    export EX_PROJECTSPATH="/Volumes/Transcend/Projects"
 fi
 
-export GOROOT=$PROJECTSPATH/go
-export PATH=$PATH:$GOROOT/bin
+if [ -d "$HOME/Library/Android/sdk/platform-tools" ] ; then
+    export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+fi
+
+# added by Anaconda2 4.1.1 installer
+if [ -d "$HOME/anaconda/bin" ] ; then
+    export PATH="$HOME/anaconda/bin:$PATH"
+fi
+
+# Setting PATH for Python 3.5
+if [ -d "/Library/Frameworks/Python.framework/Versions/3.5/bin" ] ; then
+    export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:$PATH"
+fi
+
+if [ -d "/usr/local/opt/gnupg/libexec/gpgbin" ] ; then
+    export PATH="/usr/local/opt/gnupg/libexec/gpgbin:$PATH"
+fi
+
+export GOPATH=$PROJECTSPATH/go
+export PATH=$PATH:$GOPATH/bin
 
 # Predictable SSH authentication socket location.
 SOCK="$HOME/.ssh/ssh-agent-sock"
@@ -20,3 +41,6 @@ if [ -d $HOME/.ssh -a -n "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$SOCK" ] ; the
     ln -nfs $SSH_AUTH_SOCK $SOCK
     export SSH_AUTH_SOCK=$SOCK
 fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
