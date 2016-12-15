@@ -53,10 +53,10 @@ set synmaxcol=500               " Syntax coloring lines that are too long just s
 set statusline=%f\ %m\ %y\ %r%=%l\ %c\ [%p%%]\ %L   " statusline format
 
 " disable arrows
-noremap <Up> <C-Y><C-Y><C-Y><C-Y>
-noremap <Down> <C-E><C-E><C-E><C-E>
-noremap <Left> zhzhzhzh
-noremap <Right> zlzlzlzl
+" noremap <Up> <C-Y><C-Y><C-Y><C-Y>
+" noremap <Down> <C-E><C-E><C-E><C-E>
+" noremap <Left> zhzhzhzh
+" noremap <Right> zlzlzlzl
 
 let mapleader=","
 
