@@ -5,6 +5,8 @@ export LANG="en_US.UTF-8"
 export PATH=$HOME/.bin:$HOME/node_modules/.bin:/usr/local/sbin:/usr/local/bin:$PATH
 export EDITOR=vim
 export PLATFORM=`uname`
+export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
 
 if [[ $PLATFORM == 'Linux' ]]; then
     export PROJECTSPATH="$HOME/projects"
@@ -42,5 +44,3 @@ if [ -d $HOME/.ssh -a -n "$SSH_AUTH_SOCK" -a "$SSH_AUTH_SOCK" != "$SOCK" ] ; the
     export SSH_AUTH_SOCK=$SOCK
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
