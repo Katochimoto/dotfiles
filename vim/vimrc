@@ -1,4 +1,3 @@
-set nocompatible
 
 set ignorecase                  " ignore case of searches
 set smartcase                   " don't ignore case when use capitals

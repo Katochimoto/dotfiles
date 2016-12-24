@@ -25,6 +25,10 @@ if [ -d "$HOME/anaconda/bin" ] ; then
     export PATH="$HOME/anaconda/bin:$PATH"
 fi
 
+if [ -d "$HOME/.cargo/bin" ] ; then
+    export PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # Setting PATH for Python 3.5
 if [ -d "/Library/Frameworks/Python.framework/Versions/3.5/bin" ] ; then
     export PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:$PATH"

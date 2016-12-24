@@ -18,6 +18,7 @@ alias sss='cd ..; cd ..; cd ..'
 alias m='make'
 
 alias p="cd $PROJECTSPATH"
+alias ep="cd $EX_PROJECTSPATH"
 
 function serve() {
     local port=${1:-8080}

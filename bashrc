@@ -5,3 +5,4 @@ source ~/.dotfiles/bash/aliases_git
 source ~/.dotfiles/bash/aliases_vim
 source ~/.dotfiles/compl/git
 source ~/.dotfiles/compl/npm
+
