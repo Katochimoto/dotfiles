@@ -31,6 +31,9 @@ fi
 
 if [ -d "$HOME/emsdk/emsdk-portable" ] ; then
     export PATH="$HOME/emsdk/emsdk-portable:$PATH"
+    export PATH="$HOME/emsdk/emsdk-portable/clang/fastcomp/build_incoming_64/bin:$PATH"
+    export PATH="$HOME/emsdk/emsdk-portable/node/4.1.1_64bit/bin:$PATH"
+    export PATH="$HOME/emsdk/emsdk-portable/emscripten/incoming:$PATH"
 fi
 
 # Setting PATH for Python 3.5
